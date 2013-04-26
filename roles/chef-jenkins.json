@@ -1,0 +1,22 @@
+{
+  "name": "chef-jenkins",
+  "description": "Chef Jenkins role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+	
+  },
+  "override_attributes": {
+	"node": {
+		"server": {
+			"port": "9090"
+		}
+	}
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[chef-jenkins]"
+  ],
+  "env_run_lists": {
+  }
+}
